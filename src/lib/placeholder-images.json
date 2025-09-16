@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -9,7 +10,7 @@
     {
       "id": "pizza-oven",
       "description": "A traditional brick pizza oven with a fire inside.",
-      "imageUrl": "https://images.unsplash.com/photo-1590204193836-3c94513e9a44?q=80&w=800&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1552539618-7eec9b4d1796?q=80&w=800&auto=format&fit=crop",
       "imageHint": "pizza oven"
     },
     {
