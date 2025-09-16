@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-pizza",
+      "description": "A delicious pizza on a wooden board, viewed from above.",
+      "imageUrl": "https://picsum.photos/seed/100/1920/1080",
+      "imageHint": "pizza rustic"
+    },
+    {
+      "id": "pizza-oven",
+      "description": "A traditional brick pizza oven with a fire inside.",
+      "imageUrl": "https://picsum.photos/seed/101/800/800",
+      "imageHint": "pizza oven"
+    },
+    {
+      "id": "menu-banner",
+      "description": "Fresh pizza ingredients like tomatoes, basil, and flour on a dark table.",
+      "imageUrl": "https://picsum.photos/seed/102/1920/500",
+      "imageHint": "pizza ingredients"
+    },
+    {
+      "id": "contact-banner",
+      "description": "The interior of a cozy, modern pizzeria.",
+      "imageUrl": "https://picsum.photos/seed/103/1920/500",
+      "imageHint": "pizzeria interior"
+    },
+    {
+      "id": "margherita",
+      "description": "A classic Margherita pizza with fresh basil.",
+      "imageUrl": "https://picsum.photos/seed/1/600/400",
+      "imageHint": "margherita pizza"
+    },
+    {
+      "id": "pepperoni",
+      "description": "A pepperoni pizza with melted cheese.",
+      "imageUrl": "https://picsum.photos/seed/2/600/400",
+      "imageHint": "pepperoni pizza"
+    },
+    {
+      "id": "veggie",
+      "description": "A vegetarian pizza topped with bell peppers, olives, and onions.",
+      "imageUrl": "https://picsum.photos/seed/3/600/400",
+      "imageHint": "vegetarian pizza"
+    },
+    {
+      "id": "bbq-chicken",
+      "description": "A BBQ chicken pizza with red onions and cilantro.",
+      "imageUrl": "https://picsum.photos/seed/4/600/400",
+      "imageHint": "bbq pizza"
+    },
+    {
+      "id": "hawaiian",
+      "description": "A Hawaiian pizza with ham and pineapple.",
+      "imageUrl": "https://picsum.photos/seed/5/600/400",
+      "imageHint": "hawaiian pizza"
+    },
+    {
+      "id": "meat-lovers",
+      "description": "A meat lover's pizza with sausage, pepperoni, and bacon.",
+      "imageUrl": "https://picsum.photos/seed/6/600/400",
+      "imageHint": "meat pizza"
+    },
+    {
+      "id": "four-cheese",
+      "description": "A four cheese pizza with a golden crust.",
+      "imageUrl": "https://picsum.photos/seed/7/600/400",
+      "imageHint": "cheese pizza"
+    },
+    {
+      "id": "mushroom-truffle",
+      "description": "A gourmet mushroom and truffle oil pizza.",
+      "imageUrl": "https://picsum.photos/seed/8/600/400",
+      "imageHint": "mushroom pizza"
+    }
+  ]
 }
