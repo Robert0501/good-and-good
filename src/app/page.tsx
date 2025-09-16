@@ -21,15 +21,29 @@ const featuredDeserts = products.filter(p => p.category === 'Desert').slice(0, 3
 const featuredCoffees = products.filter(p => p.category === 'Cafea').slice(0, 3);
 const featuredDrinks = products.filter(p => p.category === 'Bauturi').slice(0, 3);
 
+const categorySubtitles: Partial<Record<ProductCategory, string>> = {
+  Pizza: "Pizza artizanală, coaptă pe vatră, cu ingrediente proaspete.",
+  Panini: "Sandvișuri calde și crocante, pline de gust.",
+  Desert: "Finalul dulce perfect pentru masa ta.",
+  Cafea: "Cafea de specialitate, proaspăt măcinată.",
+  Bauturi: "Băuturi răcoritoare pentru a-ți potoli setea.",
+};
 
 const ProductSection = ({ title, products, category }: { title: string, products: any[], category: ProductCategory }) => (
   <section className="py-16 lg:py-24 bg-background">
     <div className="container mx-auto px-4">
-      <h2 className="font-headline text-5xl md:text-6xl text-center mb-12">
-        {title}
-      </h2>
+      <div className="text-center mb-12">
+        <h2 className="font-headline text-5xl md:text-6xl">
+          {title}
+        </h2>
+        {categorySubtitles[category] && (
+          <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
+            {categorySubtitles[category]}
+          </p>
+        )}
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {products.map((product, index) => (
+        {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
