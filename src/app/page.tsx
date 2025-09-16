@@ -12,14 +12,42 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import type { ProductCategory } from "@/lib/types";
+import ProductCard from "@/components/ProductCard";
 
-const featuredPizzas = products.slice(0, 3);
+const featuredPizzas = products.filter(p => p.category === 'Pizza').slice(0, 3);
+const featuredPaninis = products.filter(p => p.category === 'Panini').slice(0, 3);
+const featuredDeserts = products.filter(p => p.category === 'Desert').slice(0, 3);
+const featuredCoffees = products.filter(p => p.category === 'Cafea').slice(0, 3);
+const featuredDrinks = products.filter(p => p.category === 'Bauturi').slice(0, 3);
+
+
+const ProductSection = ({ title, products, category }: { title: string, products: any[], category: ProductCategory }) => (
+  <section className="py-16 lg:py-24 bg-background">
+    <div className="container mx-auto px-4">
+      <h2 className="font-headline text-5xl md:text-6xl text-center mb-12">
+        {title}
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {products.map((product, index) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+      <div className="text-center mt-12">
+        <Button asChild size="lg" variant="outline" className="border-2 border-primary hover:bg-primary hover:text-primary-foreground text-base">
+          <Link href={`/menu?category=${category}`}>
+            Vezi Toate
+          </Link>
+        </Button>
+      </div>
+    </div>
+  </section>
+);
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-pizza');
   const aboutImages = PlaceHolderImages.filter(p => p.id.startsWith('story-'));
   const interiorImages = PlaceHolderImages.filter(p => p.id.startsWith('interior-'));
-
 
   return (
     <div className="flex flex-col animate-fade-in-up">
@@ -52,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* Featured Pizzas Section */}
-      <section className="py-16 lg:py-24 bg-background">
+      <section className="py-16 lg:py-24 bg-secondary/10">
         <div className="container mx-auto px-4">
           <h2 className="font-headline text-5xl md:text-6xl text-center mb-12">
             Recomandările Bucătarului
@@ -62,27 +90,31 @@ export default function Home() {
               const pizzaImage = PlaceHolderImages.find(p => p.id === pizza.image);
               return (
                 <Card key={pizza.id} className="overflow-hidden group flex flex-col border-2 border-transparent hover:border-primary transition-all duration-300 animate-fade-in-up" style={{ animationDelay: `${index * 200}ms`}}>
-                  <div className="relative w-full h-64 overflow-hidden">
-                    {pizzaImage && (
-                      <Image
-                        src={pizzaImage.imageUrl}
-                        alt={pizza.name}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                        data-ai-hint={pizzaImage.imageHint}
-                      />
-                    )}
-                  </div>
+                  <Link href={`/menu/${pizza.slug}`}>
+                    <div className="relative w-full h-64 overflow-hidden">
+                      {pizzaImage && (
+                        <Image
+                          src={pizzaImage.imageUrl}
+                          alt={pizza.name}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          data-ai-hint={pizzaImage.imageHint}
+                        />
+                      )}
+                    </div>
+                  </Link>
                   <CardHeader>
-                    <CardTitle className="font-headline text-3xl">{pizza.name}</CardTitle>
+                    <CardTitle className="font-headline text-3xl">
+                      <Link href={`/menu/${pizza.slug}`} className="hover:text-primary transition-colors">{pizza.name}</Link>
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow flex flex-col">
                     <p className="text-muted-foreground mb-4 flex-grow">{pizza.description}</p>
                     <div className="flex justify-between items-center mt-auto">
                       <span className="text-2xl font-bold text-primary">${pizza.price.Normal.toFixed(2)}</span>
-                      <Button asChild variant="ghost" className="text-primary hover:text-primary hover:bg-primary/10">
+                       <Button asChild variant="ghost" className="text-primary hover:text-primary hover:bg-primary/10">
                         <Link href={`/menu/${pizza.slug}`}>
-                          Vezi Detalii <ArrowRight className="ml-2" />
+                          Vezi Detalii <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
                     </div>
@@ -100,6 +132,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ProductSection title="Pizza" products={featuredPizzas} category="Pizza" />
+      <ProductSection title="Panini" products={featuredPaninis} category="Panini" />
+      <ProductSection title="Desert" products={featuredDeserts} category="Desert" />
+      <ProductSection title="Cafea" products={featuredCoffees} category="Cafea" />
+      <ProductSection title="Bauturi" products={featuredDrinks} category="Bauturi" />
 
       {/* About Us Section */}
       <section className="py-16 lg:py-24 bg-secondary/20">

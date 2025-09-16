@@ -1,23 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { products } from "@/lib/products";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import ProductCard from "@/components/ProductCard";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import type { Product } from "@/lib/types";
+import type { Product, ProductCategory } from "@/lib/types";
 
-const categories = ["Toate", ...Array.from(new Set(products.map(p => p.category)))];
+const categories: ProductCategory[] = ["Toate", "Pizza", "Panini", "Desert", "Cafea", "Bauturi"];
 
-export default function MenuPage() {
-  const [filter, setFilter] = useState("Toate");
+function MenuContent() {
+  const searchParams = useSearchParams();
+  const initialCategory = searchParams.get("category") as ProductCategory;
+  
+  const [filter, setFilter] = useState<ProductCategory>(
+    initialCategory && categories.includes(initialCategory) ? initialCategory : "Toate"
+  );
+  
   const menuBanner = PlaceHolderImages.find(p => p.id === 'menu-banner');
 
   const filteredProducts = filter === "Toate"
     ? products
     : products.filter(p => p.category === filter);
 
+  useEffect(() => {
+    const category = searchParams.get("category") as ProductCategory;
+    if (category && categories.includes(category)) {
+      setFilter(category);
+    }
+  }, [searchParams]);
+    
   return (
     <div>
       <section className="relative w-full h-[30vh] flex items-center justify-center text-center text-white">
@@ -45,11 +59,11 @@ export default function MenuPage() {
       <section className="py-12 lg:py-16">
         <div className="container mx-auto px-4">
           <div className="flex justify-center mb-12">
-            <Tabs value={filter} onValueChange={setFilter}>
-              <TabsList>
+            <Tabs value={filter} onValueChange={(value) => setFilter(value as ProductCategory)}>
+              <TabsList className="grid w-full grid-cols-3 sm:grid-cols-6">
                 {categories.map(category => (
                   <TabsTrigger key={category} value={category}>
-                    {category}
+                    {category === 'Toate' ? 'Toate' : category}
                   </TabsTrigger>
                 ))}
               </TabsList>
@@ -65,4 +79,13 @@ export default function MenuPage() {
       </section>
     </div>
   );
+}
+
+
+export default function MenuPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <MenuContent />
+    </Suspense>
+  )
 }

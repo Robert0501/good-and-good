@@ -10,7 +10,7 @@ export const products: Product[] = [
     ingredients: ['Roșii San Marzano', 'Mozzarella Proaspătă', 'Busuioc', 'Ulei de Măsline Extra Virgin'],
     price: { Normal: 14.99, Large: 18.99, Party: 25.99 },
     image: 'margherita',
-    category: 'Clasice',
+    category: 'Pizza',
     nutrition: { calories: '250', protein: '12g', fat: '10g', carbohydrates: '28g', sodium: '640mg' }
   },
   {
@@ -22,7 +22,7 @@ export const products: Product[] = [
     ingredients: ['Sos de Roșii', 'Mozzarella', 'Pepperoni Picant'],
     price: { Normal: 16.99, Large: 21.99, Party: 29.99 },
     image: 'pepperoni',
-    category: 'Clasice',
+    category: 'Pizza',
     nutrition: { calories: '320', protein: '15g', fat: '18g', carbohydrates: '30g', sodium: '980mg' }
   },
   {
@@ -34,7 +34,7 @@ export const products: Product[] = [
     ingredients: ['Ardei Gras', 'Ceapă Roșie', 'Măsline Negre', 'Ciuperci', 'Mozzarella'],
     price: { Normal: 15.99, Large: 20.99, Party: 27.99 },
     image: 'veggie',
-    category: 'Vegetariene',
+    category: 'Pizza',
     nutrition: { calories: '230', protein: '10g', fat: '8g', carbohydrates: '32g', sodium: '590mg' }
   },
   {
@@ -46,7 +46,7 @@ export const products: Product[] = [
     ingredients: ['Sos BBQ', 'Pui la Grătar', 'Ceapă Roșie', 'Coriandru', 'Mozzarella'],
     price: { Normal: 18.99, Large: 24.99, Party: 32.99 },
     image: 'bbq-chicken',
-    category: 'Gourmet',
+    category: 'Pizza',
     nutrition: { calories: '350', protein: '20g', fat: '14g', carbohydrates: '38g', sodium: '890mg' }
   },
   {
@@ -58,7 +58,7 @@ export const products: Product[] = [
     ingredients: ['Sos de Roșii', 'Mozzarella', 'Șuncă Afumată', 'Ananas'],
     price: { Normal: 16.99, Large: 21.99, Party: 29.99 },
     image: 'hawaiian',
-    category: 'Clasice',
+    category: 'Pizza',
     nutrition: { calories: '290', protein: '14g', fat: '11g', carbohydrates: '35g', sodium: '910mg' }
   },
   {
@@ -70,7 +70,7 @@ export const products: Product[] = [
     ingredients: ['Pepperoni', 'Cârnați Italieni', 'Bacon', 'Șuncă Afumată', 'Mozzarella'],
     price: { Normal: 19.99, Large: 25.99, Party: 34.99 },
     image: 'meat-lovers',
-    category: 'Gourmet',
+    category: 'Pizza',
     nutrition: { calories: '410', protein: '22g', fat: '25g', carbohydrates: '31g', sodium: '1250mg' }
   },
   {
@@ -82,7 +82,7 @@ export const products: Product[] = [
     ingredients: ['Mozzarella', 'Gorgonzola', 'Parmezan', 'Ricotta'],
     price: { Normal: 17.99, Large: 23.99, Party: 31.99 },
     image: 'four-cheese',
-    category: 'Vegetariene',
+    category: 'Pizza',
     nutrition: { calories: '380', protein: '18g', fat: '22g', carbohydrates: '29g', sodium: '820mg' }
   },
   {
@@ -94,7 +94,151 @@ export const products: Product[] = [
     ingredients: ['Ciuperci Sălbatice', 'Mascarpone', 'Mozzarella', 'Ulei de Trufe Albe', 'Pătrunjel'],
     price: { Normal: 20.99, Large: 26.99, Party: 36.99 },
     image: 'mushroom-truffle',
-    category: 'Gourmet',
+    category: 'Pizza',
     nutrition: { calories: '360', protein: '16g', fat: '20g', carbohydrates: '30g', sodium: '750mg' }
   },
+  {
+    id: '9',
+    name: 'Panini Caprese',
+    slug: 'panini-caprese',
+    description: 'Mozzarella proaspătă, roșii, busuioc și un strop de oțet balsamic.',
+    longDescription: 'Simplu, dar elegant. Panini-ul nostru Caprese este umplut cu felii de mozzarella proaspătă, roșii coapte și busuioc proaspăt, stropit cu un oțet balsamic redus. Presat la cald la perfecțiune.',
+    ingredients: ['Pâine Ciabatta', 'Mozzarella Proaspătă', 'Roșii', 'Busuioc', 'Oțet Balsamic'],
+    price: { Normal: 10.99, Large: 0, Party: 0 },
+    image: 'panini-caprese',
+    category: 'Panini',
+    nutrition: null
+  },
+  {
+    id: '10',
+    name: 'Panini cu Pui și Pesto',
+    slug: 'panini-chicken-pesto',
+    description: 'Pui la grătar, sos pesto, roșii uscate la soare și brânză provolone.',
+    longDescription: 'Un panini savuros, plin de arome. Pieptul de pui fraged la grătar este asociat cu sosul nostru pesto de busuioc, roșii uscate la soare și brânză provolone topită, totul într-o pâine ciabatta crocantă.',
+    ingredients: ['Pâine Ciabatta', 'Pui la Grătar', 'Sos Pesto', 'Roșii Uscate la Soare', 'Provolone'],
+    price: { Normal: 12.99, Large: 0, Party: 0 },
+    image: 'panini-chicken',
+    category: 'Panini',
+    nutrition: null
+  },
+  {
+    id: '11',
+    name: 'Panini Italian Picant',
+    slug: 'panini-spicy-italian',
+    description: 'Salam picant, șuncă, pepperoni și ardei iuți.',
+    longDescription: 'Pentru cei care doresc un pic de iuțeală. Acest panini este încărcat cu salam picant, șuncă, pepperoni, brânză provolone topită și ardei iuți, pentru o explozie de aromă.',
+    ingredients: ['Pâine Ciabatta', 'Salam Picant', 'Șuncă', 'Pepperoni', 'Provolone', 'Ardei Iuți'],
+    price: { Normal: 13.99, Large: 0, Party: 0 },
+    image: 'panini-italian',
+    category: 'Panini',
+    nutrition: null
+  },
+  {
+    id: '12',
+    name: 'Tiramisu Clasic',
+    slug: 'classic-tiramisu',
+    description: 'Pișcoturi înmuiate în cafea, mascarpone cremos și un praf de cacao.',
+    longDescription: 'Desertul italian clasic. Straturi delicate de pișcoturi înmuiate în espresso, cremă bogată de mascarpone și un praf generos de pudră de cacao.',
+    ingredients: ['Pișcoturi', 'Espresso', 'Mascarpone', 'Ouă', 'Zahăr', 'Cacao'],
+    price: { Normal: 8.99, Large: 0, Party: 0 },
+    image: 'tiramisu',
+    category: 'Desert',
+    nutrition: null
+  },
+  {
+    id: '13',
+    name: 'Cannoli Sicilieni',
+    slug: 'sicilian-cannoli',
+    description: 'Coajă crocantă umplută cu cremă dulce de ricotta și fulgi de ciocolată.',
+    longDescription: 'Un deliciu sicilian tradițional. Coji de patiserie crocante, prăjite, umplute cu o cremă de ricotta dulce și fină, cu mini fulgi de ciocolată și un praf de zahăr pudră.',
+    ingredients: ['Făină', 'Zahăr', 'Ricotta', 'Fulgi de Ciocolată', 'Zahăr Pudră'],
+    price: { Normal: 7.99, Large: 0, Party: 0 },
+    image: 'cannoli',
+    category: 'Desert',
+    nutrition: null
+  },
+  {
+    id: '14',
+    name: 'Tort de Ciocolată Lava',
+    slug: 'chocolate-lava-cake',
+    description: 'Tort de ciocolată cald și umed, cu un centru lichid de ciocolată topită.',
+    longDescription: 'Răsfățul suprem pentru iubitorii de ciocolată. Un tort de ciocolată bogat, servit cald, cu un centru irezistibil de ciocolată topită care curge la prima tăietură. Servit cu un glob de înghețată de vanilie.',
+    ingredients: ['Ciocolată Neagră', 'Unt', 'Ouă', 'Zahăr', 'Făină'],
+    price: { Normal: 9.99, Large: 0, Party: 0 },
+    image: 'lava-cake',
+    category: 'Desert',
+    nutrition: null
+  },
+  {
+    id: '15',
+    name: 'Espresso',
+    slug: 'espresso',
+    description: 'Un shot bogat și aromat de cafea prăjită intens.',
+    longDescription: 'Cafeaua noastră de bază, perfect extrasă. Un shot de espresso intens și corpolent, cu o cremă groasă, de culoarea caramelului. Inima tuturor băuturilor noastre de cafea.',
+    ingredients: ['Boabe de Cafea', 'Apă'],
+    price: { Normal: 3.50, Large: 0, Party: 0 },
+    image: 'espresso',
+    category: 'Cafea',
+    nutrition: null
+  },
+  {
+    id: '16',
+    name: 'Cappuccino',
+    slug: 'cappuccino',
+    description: 'Espresso, lapte spumat și un strat gros de spumă de lapte.',
+    longDescription: 'Echilibrul perfect între espresso bogat, lapte spumat fin și un strat luxos de spumă de lapte. O băutură de cafea clasică și reconfortantă.',
+    ingredients: ['Espresso', 'Lapte', 'Spumă de Lapte'],
+    price: { Normal: 4.50, Large: 0, Party: 0 },
+    image: 'cappuccino',
+    category: 'Cafea',
+    nutrition: null
+  },
+  {
+    id: '17',
+    name: 'Latte',
+    slug: 'latte',
+    description: 'Un shot de espresso cu lapte spumat, acoperit cu un strat subțire de spumă.',
+    longDescription: 'O băutură fină și cremoasă. Latte-ul nostru este preparat cu un shot de espresso bogat și lapte spumat, acoperit cu un strat subțire de micro-spumă. Perfect pentru cei care preferă o cafea mai lăptoasă.',
+    ingredients: ['Espresso', 'Lapte Spumat'],
+    price: { Normal: 4.50, Large: 0, Party: 0 },
+    image: 'latte',
+    category: 'Cafea',
+    nutrition: null
+  },
+  {
+    id: '18',
+    name: 'Apă Minerală',
+    slug: 'mineral-water',
+    description: 'Apă minerală italiană proaspătă și carbogazoasă.',
+    longDescription: 'O sticlă de apă minerală italiană proaspătă și efervescentă. Acompaniamentul perfect pentru orice masă.',
+    ingredients: ['Apă Minerală Carbogazoasă'],
+    price: { Normal: 3.00, Large: 0, Party: 0 },
+    image: 'soda',
+    category: 'Bauturi',
+    nutrition: null
+  },
+  {
+    id: '19',
+    name: 'Limonadă de Casă',
+    slug: 'homemade-lemonade',
+    description: 'Lămâi proaspăt stoarse, zahăr și apă. Simplu și răcoritor.',
+    longDescription: 'Preparată zilnic în casă, limonada noastră este echilibrul perfect între dulce și acrișor. O băutură răcoritoare pentru a-ți stinge setea.',
+    ingredients: ['Lămâi', 'Zahăr', 'Apă'],
+    price: { Normal: 4.00, Large: 0, Party: 0 },
+    image: 'lemonade',
+    category: 'Bauturi',
+    nutrition: null
+  },
+  {
+    id: '20',
+    name: 'Ceai Rece',
+    slug: 'iced-tea',
+    description: 'Ceai negru proaspăt preparat, servit cu gheață și o felie de lămâie.',
+    longDescription: 'Ceaiul nostru negru, proaspăt preparat și răcit, este o alegere clasică și răcoritoare. Servit cu gheață și garnisit cu o felie de lămâie proaspătă.',
+    ingredients: ['Ceai Negru', 'Apă', 'Lămâie'],
+    price: { Normal: 3.50, Large: 0, Party: 0 },
+    image: 'iced-tea',
+    category: 'Bauturi',
+    nutrition: null
+  }
 ];

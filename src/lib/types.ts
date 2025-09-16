@@ -7,6 +7,8 @@ export interface Nutrition {
 }
 
 export type PizzaSize = 'Normal' | 'Large' | 'Party';
+export type ProductCategory = 'Pizza' | 'Panini' | 'Desert' | 'Cafea' | 'Bauturi' | 'Clasice' | 'Gourmet' | 'Vegetariene';
+
 
 export interface Product {
   id: string;
@@ -21,8 +23,8 @@ export interface Product {
     Party: number;
   };
   image: string;
-  category: 'Clasice' | 'Gourmet' | 'Vegetariene';
-  nutrition: Nutrition;
+  category: ProductCategory;
+  nutrition: Nutrition | null;
 }
 
 export interface CartItem extends Product {
