@@ -9,35 +9,13 @@ import QuantitySelector from "@/components/QuantitySelector";
 import { Trash2, ShoppingCart } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { useRouter } from "next/navigation";
-
 
 export default function OrderPage() {
-  const { cartItems, updateQuantity, removeFromCart, cartTotal, clearCart } = useCart();
-  const router = useRouter();
+  const { cartItems, updateQuantity, removeFromCart, cartTotal } = useCart();
 
   const taxRate = 0.08;
   const taxes = cartTotal * taxRate;
   const total = cartTotal + taxes;
-
-  const handlePlaceOrder = () => {
-    // Într-o aplicație reală, acest lucru ar declanșa procesarea plății și a comenzii.
-    // Aici, doar golim coșul și redirecționăm.
-    clearCart();
-    router.push("/");
-  };
-
 
   if (cartItems.length === 0) {
     return (
@@ -114,25 +92,11 @@ export default function OrderPage() {
             </div>
           </CardContent>
           <CardFooter>
-            <AlertDialog>
-              <AlertDialogTrigger asChild>
-                <Button size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+             <Button asChild size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                <Link href="/checkout">
                   Plasează Comanda
-                </Button>
-              </AlertDialogTrigger>
-              <AlertDialogContent>
-                <AlertDialogHeader>
-                  <AlertDialogTitle>Confirmi Comanda?</AlertDialogTitle>
-                  <AlertDialogDescription>
-                    Aceasta este o aplicație demonstrativă. Apăsarea butonului 'Confirmă' va goli coșul de cumpărături și te va duce la pagina principală. Nu se va plasa nicio comandă reală.
-                  </AlertDialogDescription>
-                </AlertDialogHeader>
-                <AlertDialogFooter>
-                  <AlertDialogCancel>Anulează</AlertDialogCancel>
-                  <AlertDialogAction onClick={handlePlaceOrder}>Confirmă</AlertDialogAction>
-                </AlertDialogFooter>
-              </AlertDialogContent>
-            </AlertDialog>
+                </Link>
+              </Button>
           </CardFooter>
         </Card>
       </div>
