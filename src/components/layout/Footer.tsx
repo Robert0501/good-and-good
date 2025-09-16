@@ -11,7 +11,7 @@ export default function Footer() {
             <span className="font-bold font-headline text-xl">Good and Goody</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Good and Goody Pizzeria. All Rights Reserved.
+            © {new Date().getFullYear()} Good and Goody Pizzeria. Toate drepturile rezervate.
           </p>
           <div className="flex items-center space-x-4">
             <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">

@@ -32,11 +32,11 @@ export default function Home() {
             Good and Goody
           </h1>
           <p className="mt-4 text-xl md:text-3xl font-light drop-shadow-xl text-balance">
-            Slice by slice, a story of tradition and taste.
+            Felie cu felie, o poveste despre tradiție și gust.
           </p>
           <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 text-lg">
             <Link href="/menu">
-              Explore Our Menu <ArrowRight className="ml-2" />
+              Explorează Meniul <ArrowRight className="ml-2" />
             </Link>
           </Button>
         </div>
@@ -46,7 +46,7 @@ export default function Home() {
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="font-headline text-5xl md:text-6xl text-center mb-12">
-            Chef's Recommendations
+            Recomandările Bucătarului
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredPizzas.map((pizza, index) => {
@@ -73,7 +73,7 @@ export default function Home() {
                       <span className="text-2xl font-bold text-primary">${pizza.price.Normal.toFixed(2)}</span>
                       <Button asChild variant="ghost" className="text-primary hover:text-primary hover:bg-primary/10">
                         <Link href={`/menu/${pizza.slug}`}>
-                          View Details <ArrowRight className="ml-2" />
+                          Vezi Detalii <ArrowRight className="ml-2" />
                         </Link>
                       </Button>
                     </div>
@@ -85,7 +85,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline" className="border-2 border-primary hover:bg-primary hover:text-primary-foreground text-base">
               <Link href="/menu">
-                See Full Menu
+                Vezi Meniul Complet
               </Link>
             </Button>
           </div>
@@ -109,17 +109,17 @@ export default function Home() {
             </div>
             <div className="animate-fade-in-up">
               <h2 className="font-headline text-5xl md:text-6xl mb-6">
-                Our Story
+                Povestea Noastră
               </h2>
               <p className="text-xl text-muted-foreground mb-4 text-balance">
-                Founded in 2024, Good and Goody was born from a passion for authentic Italian pizza. We believe in using only the freshest, locally-sourced ingredients to create unforgettable culinary experiences.
+                Fondată în 2024, Good and Goody s-a născut din pasiunea pentru pizza italiană autentică. Credem în folosirea doar a celor mai proaspete ingrediente, de proveniență locală, pentru a crea experiențe culinare de neuitat.
               </p>
               <p className="text-xl text-muted-foreground text-balance">
-                Our dough is prepared daily and fermented for 72 hours, creating a light, airy, and digestible crust. Every pizza is a piece of our heart, served to you.
+                Aluatul nostru este preparat zilnic și dospit timp de 72 de ore, creând o crustă ușoară, aerată și digerabilă. Fiecare pizza este o bucată din inima noastră, servită vouă.
               </p>
               <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground text-lg">
                 <Link href="/contact">
-                  Get In Touch
+                  Contactează-ne
                 </Link>
               </Button>
             </div>

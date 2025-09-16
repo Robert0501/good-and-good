@@ -21,7 +21,7 @@ export interface Product {
     Party: number;
   };
   image: string;
-  category: 'Classic' | 'Gourmet' | 'Vegetarian';
+  category: 'Clasice' | 'Gourmet' | 'Vegetariene';
   nutrition: Nutrition;
 }
 

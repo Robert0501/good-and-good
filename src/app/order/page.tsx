@@ -32,8 +32,8 @@ export default function OrderPage() {
   const total = cartTotal + taxes;
 
   const handlePlaceOrder = () => {
-    // In a real app, this would trigger payment and order processing.
-    // Here, we just clear the cart and redirect.
+    // Într-o aplicație reală, acest lucru ar declanșa procesarea plății și a comenzii.
+    // Aici, doar golim coșul și redirecționăm.
     clearCart();
     router.push("/");
   };
@@ -43,11 +43,11 @@ export default function OrderPage() {
     return (
       <div className="container mx-auto px-4 py-20 text-center">
         <ShoppingCart className="mx-auto h-24 w-24 text-muted-foreground" />
-        <h1 className="mt-4 font-headline text-4xl">Your Cart is Empty</h1>
-        <p className="mt-2 text-lg text-muted-foreground">Looks like you haven't added any delicious pizzas yet.</p>
+        <h1 className="mt-4 font-headline text-4xl">Coșul tău este gol</h1>
+        <p className="mt-2 text-lg text-muted-foreground">Se pare că nu ai adăugat încă nicio pizza delicioasă.</p>
         <Button asChild size="lg" className="mt-6">
           <Link href="/menu">
-            Go to Menu
+            Mergi la Meniu
           </Link>
         </Button>
       </div>
@@ -56,7 +56,7 @@ export default function OrderPage() {
 
   return (
     <div className="container mx-auto px-4 py-12 lg:py-20">
-      <h1 className="font-headline text-4xl md:text-5xl mb-8">Your Order</h1>
+      <h1 className="font-headline text-4xl md:text-5xl mb-8">Comanda Ta</h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
         <div className="lg:col-span-2 space-y-4">
           {cartItems.map(item => {
@@ -96,7 +96,7 @@ export default function OrderPage() {
 
         <Card className="lg:col-span-1 sticky top-24">
           <CardHeader>
-            <CardTitle className="font-headline text-2xl">Order Summary</CardTitle>
+            <CardTitle className="font-headline text-2xl">Sumar Comandă</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="flex justify-between">
@@ -104,7 +104,7 @@ export default function OrderPage() {
               <span>${cartTotal.toFixed(2)}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Taxes ({(taxRate * 100).toFixed(0)}%)</span>
+              <span className="text-muted-foreground">Taxe ({(taxRate * 100).toFixed(0)}%)</span>
               <span>${taxes.toFixed(2)}</span>
             </div>
             <Separator />
@@ -117,19 +117,19 @@ export default function OrderPage() {
             <AlertDialog>
               <AlertDialogTrigger asChild>
                 <Button size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                  Place Order
+                  Plasează Comanda
                 </Button>
               </AlertDialogTrigger>
               <AlertDialogContent>
                 <AlertDialogHeader>
-                  <AlertDialogTitle>Confirm Your Order?</AlertDialogTitle>
+                  <AlertDialogTitle>Confirmi Comanda?</AlertDialogTitle>
                   <AlertDialogDescription>
-                    This is a demo application. Pressing 'Confirm' will clear your cart and take you to the homepage. No real order will be placed.
+                    Aceasta este o aplicație demonstrativă. Apăsarea butonului 'Confirmă' va goli coșul de cumpărături și te va duce la pagina principală. Nu se va plasa nicio comandă reală.
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                  <AlertDialogCancel>Cancel</AlertDialogCancel>
-                  <AlertDialogAction onClick={handlePlaceOrder}>Confirm</AlertDialogAction>
+                  <AlertDialogCancel>Anulează</AlertDialogCancel>
+                  <AlertDialogAction onClick={handlePlaceOrder}>Confirmă</AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>

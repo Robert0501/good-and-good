@@ -8,13 +8,13 @@ import ProductCard from "@/components/ProductCard";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Product } from "@/lib/types";
 
-const categories = ["All", ...Array.from(new Set(products.map(p => p.category)))];
+const categories = ["Toate", ...Array.from(new Set(products.map(p => p.category)))];
 
 export default function MenuPage() {
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState("Toate");
   const menuBanner = PlaceHolderImages.find(p => p.id === 'menu-banner');
 
-  const filteredProducts = filter === "All"
+  const filteredProducts = filter === "Toate"
     ? products
     : products.filter(p => p.category === filter);
 
@@ -34,10 +34,10 @@ export default function MenuPage() {
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 p-4">
           <h1 className="font-headline text-5xl md:text-7xl drop-shadow-lg">
-            Our Menu
+            Meniul Nostru
           </h1>
           <p className="mt-2 text-lg md:text-xl font-light drop-shadow-md">
-            Crafted with passion, baked to perfection.
+            Creat cu pasiune, copt la perfecțiune.
           </p>
         </div>
       </section>

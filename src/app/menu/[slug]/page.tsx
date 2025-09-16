@@ -32,8 +32,8 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
   const handleAddToCart = () => {
     addToCart(product, quantity, size);
     toast({
-      title: "Added to cart!",
-      description: `${quantity} x ${size} ${product.name} added.`,
+      title: "Adăugat în coș!",
+      description: `${quantity} x ${size} ${product.name} adăugat.`,
     });
   };
 
@@ -46,7 +46,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         <Button asChild variant="ghost" className="text-muted-foreground">
           <Link href="/menu">
             <ChevronLeft className="mr-2 h-4 w-4" />
-            Back to Menu
+            Înapoi la Meniu
           </Link>
         </Button>
       </div>
@@ -70,7 +70,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           <p className="text-lg text-muted-foreground mb-6">{product.longDescription}</p>
           
           <div className="mb-6">
-            <h2 className="font-bold text-lg mb-2">Size</h2>
+            <h2 className="font-bold text-lg mb-2">Mărime</h2>
              <RadioGroup defaultValue="Normal" value={size} onValueChange={(value: PizzaSize) => setSize(value)} className="flex gap-4">
                 {(Object.keys(product.price) as PizzaSize[]).map((sizeOption) => (
                   <div key={sizeOption} className="flex items-center space-x-2">
@@ -84,7 +84,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           </div>
 
           <div className="mb-6">
-            <h2 className="font-bold text-lg mb-2">Ingredients</h2>
+            <h2 className="font-bold text-lg mb-2">Ingrediente</h2>
             <div className="flex flex-wrap gap-2">
               {product.ingredients.map(ingredient => (
                 <Badge key={ingredient} variant="outline">{ingredient}</Badge>
@@ -94,12 +94,12 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           
           {nutritionData.length > 0 && (
             <div className="mb-6">
-              <h2 className="font-bold text-lg mb-2">Nutrition Facts (per slice)</h2>
+              <h2 className="font-bold text-lg mb-2">Informații Nutriționale (per felie)</h2>
               <Table>
                 <TableHeader>
                   <TableRow>
                     <TableHead>Nutrient</TableHead>
-                    <TableHead className="text-right">Amount</TableHead>
+                    <TableHead className="text-right">Cantitate</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -120,7 +120,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               <div className="flex items-center gap-4">
                 <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
                 <Button onClick={handleAddToCart} size="lg" className="flex-grow bg-accent text-accent-foreground hover:bg-accent/90">
-                  Add to Cart
+                  Adaugă în coș
                 </Button>
               </div>
             </div>

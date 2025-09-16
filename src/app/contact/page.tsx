@@ -22,13 +22,13 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+    message: "Numele trebuie să aibă cel puțin 2 caractere.",
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: "Vă rugăm să introduceți o adresă de email validă.",
   }),
   message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
+    message: "Mesajul trebuie să aibă cel puțin 10 caractere.",
   }),
 });
 
@@ -47,8 +47,8 @@ export default function ContactPage() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values); // In a real app, you'd send this to a server
     toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. We'll get back to you soon.",
+      title: "Mesaj Trimis!",
+      description: "Mulțumim că ne-ai contactat. Vom reveni cu un răspuns în curând.",
     });
     form.reset();
   }
@@ -69,10 +69,10 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 p-4">
           <h1 className="font-headline text-5xl md:text-7xl drop-shadow-lg">
-            Contact Us
+            Contactează-ne
           </h1>
           <p className="mt-2 text-lg md:text-xl font-light drop-shadow-md">
-            We'd love to hear from you.
+            Ne-ar plăcea să auzim de la tine.
           </p>
         </div>
       </section>
@@ -82,15 +82,15 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             <div className="space-y-8">
               <div>
-                <h2 className="font-headline text-3xl mb-4">Get in Touch</h2>
+                <h2 className="font-headline text-3xl mb-4">Intră în contact</h2>
                 <p className="text-muted-foreground">
-                  Have a question, a suggestion, or just want to say hi? Fill out the form and our team will get back to you as soon as possible. For reservations, please give us a call.
+                  Ai o întrebare, o sugestie sau vrei doar să ne saluți? Completează formularul și echipa noastră îți va răspunde cât mai curând posibil. Pentru rezervări, te rugăm să ne suni.
                 </p>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <MapPin className="h-6 w-6 text-primary" />
-                  <span className="text-muted-foreground">123 Pizza Lane, Flavor Town, 12345</span>
+                  <span className="text-muted-foreground">Str. Pizza nr. 123, Orașul Aromelor, 12345</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="h-6 w-6 text-primary" />
@@ -98,7 +98,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="h-6 w-6 text-primary" />
-                  <span className="text-muted-foreground">hello@goodandgoody.com</span>
+                  <span className="text-muted-foreground">salut@goodandgoody.com</span>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function ContactPage() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Name</FormLabel>
+                        <FormLabel>Nume</FormLabel>
                         <FormControl>
                           <Input placeholder="John Doe" {...field} />
                         </FormControl>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                       <FormItem>
                         <FormLabel>Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="john.doe@example.com" {...field} />
+                          <Input placeholder="john.doe@exemplu.com" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -136,10 +136,10 @@ export default function ContactPage() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message</FormLabel>
+                        <FormLabel>Mesaj</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Tell us what's on your mind..."
+                            placeholder="Spune-ne ce te frământă..."
                             className="min-h-[150px]"
                             {...field}
                           />
@@ -149,7 +149,7 @@ export default function ContactPage() {
                     )}
                   />
                   <Button type="submit" size="lg" className="w-full bg-primary text-primary-foreground">
-                    Send Message
+                    Trimite Mesaj
                   </Button>
                 </form>
               </Form>

@@ -10,8 +10,8 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/menu", label: "Menu" },
+  { href: "/", label: "Acasă" },
+  { href: "/menu", label: "Meniu" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -54,7 +54,7 @@ export default function Header() {
                   {itemCount}
                 </span>
               )}
-              <span className="sr-only">Shopping Cart</span>
+              <span className="sr-only">Coș de cumpărături</span>
             </Link>
           </Button>
           <div className="md:hidden">
@@ -62,7 +62,7 @@ export default function Header() {
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
                   <MenuIcon className="h-7 w-7"/>
-                  <span className="sr-only">Toggle Menu</span>
+                  <span className="sr-only">Comută Meniul</span>
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="bg-card">

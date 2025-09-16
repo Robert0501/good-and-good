@@ -21,8 +21,8 @@ export default function ProductCard({ product }: ProductCardProps) {
   const handleAddToCart = () => {
     addToCart(product, 1, "Normal");
     toast({
-      title: "Added to cart!",
-      description: `${product.name} (Normal) is waiting for you.`,
+      title: "Adăugat în coș!",
+      description: `${product.name} (Normal) te așteaptă.`,
     });
   };
 
@@ -54,7 +54,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       </CardContent>
       <CardFooter className="flex justify-between items-center mt-4">
         <span className="text-3xl font-bold text-primary">${product.price.Normal.toFixed(2)}</span>
-        <Button onClick={handleAddToCart} aria-label={`Add ${product.name} to cart`} className="bg-primary hover:bg-accent text-primary-foreground hover:text-accent-foreground rounded-full h-12 w-12">
+        <Button onClick={handleAddToCart} aria-label={`Adaugă ${product.name} în coș`} className="bg-primary hover:bg-accent text-primary-foreground hover:text-accent-foreground rounded-full h-12 w-12">
           <ShoppingCart className="h-6 w-6" />
         </Button>
       </CardFooter>
