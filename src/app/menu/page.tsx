@@ -105,10 +105,20 @@ function MenuContent() {
               })}
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {filteredProducts.map((product: Product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
+             <div>
+                <div className="text-center mb-12">
+                  <h2 className="font-headline text-4xl md:text-5xl">{filter}</h2>
+                   {categorySubtitles[filter] && (
+                    <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
+                      {categorySubtitles[filter]}
+                    </p>
+                  )}
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                  {filteredProducts.map((product: Product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
+                </div>
             </div>
           )}
         </div>
