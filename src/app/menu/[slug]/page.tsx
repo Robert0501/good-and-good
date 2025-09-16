@@ -13,9 +13,13 @@ import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import type { PizzaSize } from "@/lib/types";
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
   const [quantity, setQuantity] = useState(1);
+  const [size, setSize] = useState<PizzaSize>("Normal");
   const { addToCart } = useCart();
   const product = products.find(p => p.slug === params.slug);
 
@@ -26,14 +30,15 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
   const productImage = PlaceHolderImages.find(p => p.id === product.image);
 
   const handleAddToCart = () => {
-    addToCart(product, quantity);
+    addToCart(product, quantity, size);
     toast({
       title: "Added to cart!",
-      description: `${quantity} x ${product.name} added.`,
+      description: `${quantity} x ${size} ${product.name} added.`,
     });
   };
 
   const nutritionData = product.nutrition ? Object.entries(product.nutrition) : [];
+  const currentPrice = product.price[size];
 
   return (
     <div className="container mx-auto px-4 py-12 lg:py-20">
@@ -64,6 +69,20 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           <h1 className="font-headline text-4xl md:text-5xl mb-4">{product.name}</h1>
           <p className="text-lg text-muted-foreground mb-6">{product.longDescription}</p>
           
+          <div className="mb-6">
+            <h2 className="font-bold text-lg mb-2">Size</h2>
+             <RadioGroup defaultValue="Normal" value={size} onValueChange={(value: PizzaSize) => setSize(value)} className="flex gap-4">
+                {(Object.keys(product.price) as PizzaSize[]).map((sizeOption) => (
+                  <div key={sizeOption} className="flex items-center space-x-2">
+                    <RadioGroupItem value={sizeOption} id={`${product.id}-${sizeOption}`} />
+                    <Label htmlFor={`${product.id}-${sizeOption}`} className="text-base cursor-pointer">
+                      {sizeOption} (+${(product.price[sizeOption] - product.price.Normal).toFixed(2)})
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
+          </div>
+
           <div className="mb-6">
             <h2 className="font-bold text-lg mb-2">Ingredients</h2>
             <div className="flex flex-wrap gap-2">
@@ -97,7 +116,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
           <div className="mt-auto pt-6">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-secondary/30 p-4 rounded-lg">
-              <span className="text-3xl font-bold font-headline text-primary">${product.price.toFixed(2)}</span>
+              <span className="text-3xl font-bold font-headline text-primary">${currentPrice.toFixed(2)}</span>
               <div className="flex items-center gap-4">
                 <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
                 <Button onClick={handleAddToCart} size="lg" className="flex-grow bg-accent text-accent-foreground hover:bg-accent/90">

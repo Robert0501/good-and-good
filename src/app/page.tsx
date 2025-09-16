@@ -70,7 +70,7 @@ export default function Home() {
                   <CardContent className="flex-grow flex flex-col">
                     <p className="text-muted-foreground mb-4 flex-grow">{pizza.description}</p>
                     <div className="flex justify-between items-center mt-auto">
-                      <span className="text-2xl font-bold text-primary">${pizza.price.toFixed(2)}</span>
+                      <span className="text-2xl font-bold text-primary">${pizza.price.Normal.toFixed(2)}</span>
                       <Button asChild variant="ghost" className="text-primary hover:text-primary hover:bg-primary/10">
                         <Link href={`/menu/${pizza.slug}`}>
                           View Details <ArrowRight className="ml-2" />

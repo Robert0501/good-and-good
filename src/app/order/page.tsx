@@ -61,8 +61,9 @@ export default function OrderPage() {
         <div className="lg:col-span-2 space-y-4">
           {cartItems.map(item => {
             const itemImage = PlaceHolderImages.find(p => p.id === item.image);
+            const itemPrice = item.price[item.size];
             return (
-              <Card key={item.id} className="flex items-center p-4">
+              <Card key={item.cartItemId} className="flex items-center p-4">
                 <div className="relative h-24 w-24 rounded-md overflow-hidden mr-4">
                   {itemImage && (
                     <Image
@@ -76,15 +77,15 @@ export default function OrderPage() {
                 </div>
                 <div className="flex-grow">
                   <h2 className="font-headline text-xl">{item.name}</h2>
-                  <p className="text-sm text-muted-foreground">${item.price.toFixed(2)}</p>
+                  <p className="text-sm text-muted-foreground">{item.size} - ${itemPrice.toFixed(2)}</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <QuantitySelector
                     quantity={item.quantity}
-                    setQuantity={(q) => updateQuantity(item.id, q)}
+                    setQuantity={(q) => updateQuantity(item.cartItemId, q)}
                   />
-                   <p className="w-20 text-right font-bold text-lg">${(item.price * item.quantity).toFixed(2)}</p>
-                  <Button variant="ghost" size="icon" onClick={() => removeFromCart(item.id)}>
+                   <p className="w-20 text-right font-bold text-lg">${(itemPrice * item.quantity).toFixed(2)}</p>
+                  <Button variant="ghost" size="icon" onClick={() => removeFromCart(item.cartItemId)}>
                     <Trash2 className="h-5 w-5 text-destructive" />
                   </Button>
                 </div>

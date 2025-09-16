@@ -19,10 +19,10 @@ export default function ProductCard({ product }: ProductCardProps) {
   const productImage = PlaceHolderImages.find(p => p.id === product.image);
 
   const handleAddToCart = () => {
-    addToCart(product, 1);
+    addToCart(product, 1, "Normal");
     toast({
       title: "Added to cart!",
-      description: `${product.name} is waiting for you.`,
+      description: `${product.name} (Normal) is waiting for you.`,
     });
   };
 
@@ -53,7 +53,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <p className="text-muted-foreground text-base line-clamp-2">{product.description}</p>
       </CardContent>
       <CardFooter className="flex justify-between items-center mt-4">
-        <span className="text-3xl font-bold text-primary">${product.price.toFixed(2)}</span>
+        <span className="text-3xl font-bold text-primary">${product.price.Normal.toFixed(2)}</span>
         <Button onClick={handleAddToCart} aria-label={`Add ${product.name} to cart`} className="bg-primary hover:bg-accent text-primary-foreground hover:text-accent-foreground rounded-full h-12 w-12">
           <ShoppingCart className="h-6 w-6" />
         </Button>

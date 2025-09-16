@@ -6,6 +6,8 @@ export interface Nutrition {
   sodium: string;
 }
 
+export type PizzaSize = 'Normal' | 'Large' | 'Party';
+
 export interface Product {
   id: string;
   name: string;
@@ -13,7 +15,11 @@ export interface Product {
   description: string;
   longDescription: string;
   ingredients: string[];
-  price: number;
+  price: {
+    Normal: number;
+    Large: number;
+    Party: number;
+  };
   image: string;
   category: 'Classic' | 'Gourmet' | 'Vegetarian';
   nutrition: Nutrition;
@@ -21,4 +27,6 @@ export interface Product {
 
 export interface CartItem extends Product {
   quantity: number;
+  size: PizzaSize;
+  cartItemId: string; // Unique identifier for a product of a specific size
 }
