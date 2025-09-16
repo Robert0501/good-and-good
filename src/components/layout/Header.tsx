@@ -2,18 +2,36 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Pizza, ShoppingCart, Menu as MenuIcon } from "lucide-react";
+import { Pizza, ShoppingCart, Menu as MenuIcon, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useCart } from "@/context/cart-context";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useState }from "react";
+import { useTheme } from "@/context/theme-provider";
 
 const navLinks = [
   { href: "/", label: "Acasă" },
   { href: "/menu", label: "Meniu" },
   { href: "/contact", label: "Contact" },
 ];
+
+function ThemeToggleButton() {
+  const { theme, setTheme } = useTheme();
+
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      className="h-12 w-12"
+    >
+      <Sun className="h-6 w-6 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      <Moon className="absolute h-6 w-6 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      <span className="sr-only">Comută tema</span>
+    </Button>
+  );
+}
 
 export default function Header() {
   const pathname = usePathname();
@@ -45,7 +63,8 @@ export default function Header() {
             <NavLink key={link.href} {...link} />
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex flex-1 items-center justify-end space-x-2">
+          <ThemeToggleButton />
           <Button asChild variant="ghost" size="icon" className="relative h-12 w-12">
             <Link href="/order">
               <ShoppingCart className="h-6 w-6" />
