@@ -12,6 +12,15 @@ import type { Product, ProductCategory } from "@/lib/types";
 const categories: ProductCategory[] = ["Toate", "Pizza", "Panini", "Desert", "Cafea", "Bauturi"];
 const displayCategories: ProductCategory[] = ["Pizza", "Panini", "Desert", "Cafea", "Bauturi"];
 
+const categorySubtitles: Partial<Record<ProductCategory, string>> = {
+  Pizza: "Pizza artizanală, coaptă pe vatră, cu ingrediente proaspete.",
+  Panini: "Sandvișuri calde și crocante, pline de gust.",
+  Desert: "Finalul dulce perfect pentru masa ta.",
+  Cafea: "Cafea de specialitate, proaspăt măcinată.",
+  Bauturi: "Băuturi răcoritoare pentru a-ți potoli setea.",
+};
+
+
 function MenuContent() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get("category") as ProductCategory;
@@ -78,7 +87,14 @@ function MenuContent() {
                 if (categoryProducts.length === 0) return null;
                 return (
                   <div key={category}>
-                    <h2 className="font-headline text-4xl md:text-5xl text-center mb-12">{category}</h2>
+                    <div className="text-center mb-12">
+                      <h2 className="font-headline text-4xl md:text-5xl">{category}</h2>
+                      {categorySubtitles[category] && (
+                        <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
+                          {categorySubtitles[category]}
+                        </p>
+                      )}
+                    </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                       {categoryProducts.map((product: Product) => (
                         <ProductCard key={product.id} product={product} />
