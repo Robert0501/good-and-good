@@ -30,41 +30,50 @@ export function ThemeProvider({
   children,
   defaultTheme = "system",
   storageKey = "vite-ui-theme",
+  attribute = "class",
+  ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
-      if (typeof window === 'undefined') {
-        return defaultTheme;
-      }
-      return (localStorage.getItem(storageKey) as Theme | null) || defaultTheme
+    if (typeof window === 'undefined') {
+      return defaultTheme;
     }
-  )
+    try {
+      return (localStorage.getItem(storageKey) as Theme) || defaultTheme
+    } catch (e) {
+      return defaultTheme
+    }
+  })
 
   useEffect(() => {
     const root = window.document.documentElement
-
+    
     root.classList.remove("light", "dark")
 
-    let effectiveTheme = theme;
     if (theme === "system") {
-      effectiveTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
         ? "dark"
         : "light"
+
+      root.classList.add(systemTheme)
+      return
     }
 
-    root.classList.add(effectiveTheme)
+    root.classList.add(theme)
   }, [theme])
 
   const value = {
     theme,
-    setTheme: (newTheme: Theme) => {
-      localStorage.setItem(storageKey, newTheme)
-      setTheme(newTheme)
+    setTheme: (theme: Theme) => {
+      try {
+        localStorage.setItem(storageKey, theme)
+      } catch (e) {}
+      setTheme(theme)
     },
   }
 
   return (
-    <ThemeProviderContext.Provider value={value}>
+    <ThemeProviderContext.Provider {...props} value={value}>
       {children}
     </ThemeProviderContext.Provider>
   )
