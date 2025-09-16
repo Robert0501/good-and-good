@@ -27,15 +27,15 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <Card className="overflow-hidden group flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-      <Link href={`/menu/${product.slug}`} className="block">
+    <Card className="overflow-hidden group flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border-2 border-transparent hover:border-primary animate-fade-in-up">
+      <Link href={`/menu/${product.slug}`} className="block overflow-hidden">
         <div className="relative w-full h-56">
           {productImage && (
             <Image
               src={productImage.imageUrl}
               alt={product.name}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[-2deg]"
+              className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               data-ai-hint={productImage.imageHint}
             />
@@ -43,19 +43,19 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
       </Link>
       <CardHeader>
-        <CardTitle className="font-headline text-2xl h-16">
+        <CardTitle className="font-headline text-3xl h-16">
           <Link href={`/menu/${product.slug}`} className="hover:text-primary transition-colors">
             {product.name}
           </Link>
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-muted-foreground text-sm line-clamp-2">{product.description}</p>
+        <p className="text-muted-foreground text-base line-clamp-2">{product.description}</p>
       </CardContent>
-      <CardFooter className="flex justify-between items-center">
-        <span className="text-2xl font-bold text-primary">${product.price.toFixed(2)}</span>
-        <Button onClick={handleAddToCart} size="icon" aria-label={`Add ${product.name} to cart`} className="bg-primary hover:bg-accent text-primary-foreground hover:text-accent-foreground">
-          <ShoppingCart className="h-5 w-5" />
+      <CardFooter className="flex justify-between items-center mt-4">
+        <span className="text-3xl font-bold text-primary">${product.price.toFixed(2)}</span>
+        <Button onClick={handleAddToCart} aria-label={`Add ${product.name} to cart`} className="bg-primary hover:bg-accent text-primary-foreground hover:text-accent-foreground rounded-full h-12 w-12">
+          <ShoppingCart className="h-6 w-6" />
         </Button>
       </CardFooter>
     </Card>

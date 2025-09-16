@@ -25,8 +25,8 @@ export default function Header() {
       href={href}
       onClick={() => setMobileMenuOpen(false)}
       className={cn(
-        "text-sm font-medium transition-colors hover:text-primary",
-        pathname === href ? "text-primary" : "text-muted-foreground"
+        "text-lg font-medium transition-colors hover:text-primary relative after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-full after:bg-primary after:scale-x-0 after:origin-left after:transition-transform hover:after:scale-x-100",
+        pathname === href ? "text-primary after:scale-x-100" : "text-foreground"
       )}
     >
       {label}
@@ -34,23 +34,23 @@ export default function Header() {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Pizza className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline text-lg">Good and Goody</span>
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-lg">
+      <div className="container flex h-20 items-center">
+        <Link href="/" className="mr-8 flex items-center space-x-2">
+          <Pizza className="h-8 w-8 text-primary" />
+          <span className="font-bold font-headline text-2xl">Good and Goody</span>
         </Link>
-        <nav className="hidden md:flex flex-1 items-center space-x-6">
+        <nav className="hidden md:flex flex-1 items-center space-x-8">
           {navLinks.map((link) => (
             <NavLink key={link.href} {...link} />
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild variant="ghost" size="icon" className="relative">
+          <Button asChild variant="ghost" size="icon" className="relative h-12 w-12">
             <Link href="/order">
-              <ShoppingCart className="h-5 w-5" />
+              <ShoppingCart className="h-6 w-6" />
               {itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-accent-foreground text-xs font-bold">
+                <span className="absolute top-1 right-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
                   {itemCount}
                 </span>
               )}
@@ -61,15 +61,15 @@ export default function Header() {
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <MenuIcon />
+                  <MenuIcon className="h-7 w-7"/>
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left">
-                <div className="flex flex-col space-y-4 p-4">
+              <SheetContent side="left" className="bg-card">
+                <div className="flex flex-col space-y-6 p-6">
                   <Link href="/" onClick={() => setMobileMenuOpen(false)} className="mb-4 flex items-center space-x-2">
-                     <Pizza className="h-6 w-6 text-primary" />
-                     <span className="font-bold font-headline text-lg">Good and Goody</span>
+                     <Pizza className="h-8 w-8 text-primary" />
+                     <span className="font-bold font-headline text-2xl">Good and Goody</span>
                   </Link>
                   {navLinks.map((link) => (
                     <NavLink key={link.href} {...link} />
