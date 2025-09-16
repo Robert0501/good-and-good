@@ -132,7 +132,7 @@ export default function Home() {
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-            <div className="animate-fade-in-up md:order-2">
+            <div className="animate-fade-in-up md:order-1">
               <h2 className="font-headline text-5xl md:text-6xl mb-6">
                 Interiorul Nostru
               </h2>
@@ -143,7 +143,7 @@ export default function Home() {
                 Fie că ești aici pentru o cină romantică, o ieșire cu prietenii sau o masă în familie, restaurantul nostru oferă un cadru confortabil și elegant pentru orice ocazie.
               </p>
             </div>
-            <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-2xl md:order-1">
+            <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-2xl md:order-2">
               {interiorImage && (
                 <Image
                   src={interiorImage.imageUrl}
