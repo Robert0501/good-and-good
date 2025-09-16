@@ -7,7 +7,7 @@ export interface Nutrition {
 }
 
 export type PizzaSize = 'Normal' | 'Large' | 'Party';
-export type ProductCategory = 'Pizza' | 'Panini' | 'Desert' | 'Cafea' | 'Bauturi' | 'Clasice' | 'Gourmet' | 'Vegetariene';
+export type ProductCategory = 'Toate' | 'Pizza' | 'Panini' | 'Desert' | 'Cafea' | 'Bauturi' | 'Clasice' | 'Gourmet' | 'Vegetariene';
 
 
 export interface Product {

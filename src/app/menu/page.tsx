@@ -10,6 +10,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Product, ProductCategory } from "@/lib/types";
 
 const categories: ProductCategory[] = ["Toate", "Pizza", "Panini", "Desert", "Cafea", "Bauturi"];
+const displayCategories: ProductCategory[] = ["Pizza", "Panini", "Desert", "Cafea", "Bauturi"];
 
 function MenuContent() {
   const searchParams = useSearchParams();
@@ -63,18 +64,37 @@ function MenuContent() {
               <TabsList className="grid w-full grid-cols-3 sm:grid-cols-6">
                 {categories.map(category => (
                   <TabsTrigger key={category} value={category}>
-                    {category === 'Toate' ? 'Toate' : category}
+                    {category}
                   </TabsTrigger>
                 ))}
               </TabsList>
             </Tabs>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {filteredProducts.map((product: Product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
+          {filter === 'Toate' ? (
+            <div className="space-y-16">
+              {displayCategories.map(category => {
+                const categoryProducts = products.filter(p => p.category === category);
+                if (categoryProducts.length === 0) return null;
+                return (
+                  <div key={category}>
+                    <h2 className="font-headline text-4xl md:text-5xl text-center mb-12">{category}</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                      {categoryProducts.map((product: Product) => (
+                        <ProductCard key={product.id} product={product} />
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              {filteredProducts.map((product: Product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </div>
