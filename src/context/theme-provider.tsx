@@ -31,14 +31,13 @@ export function ThemeProvider({
   defaultTheme = "system",
   storageKey = "vite-ui-theme",
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(defaultTheme)
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem(storageKey) as Theme | null;
-    if (storedTheme) {
-      setTheme(storedTheme);
+  const [theme, setTheme] = useState<Theme>(() => {
+      if (typeof window === 'undefined') {
+        return defaultTheme;
+      }
+      return (localStorage.getItem(storageKey) as Theme | null) || defaultTheme
     }
-  }, [storageKey]);
+  )
 
   useEffect(() => {
     const root = window.document.documentElement
