@@ -76,7 +76,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                   <div key={sizeOption} className="flex items-center space-x-2">
                     <RadioGroupItem value={sizeOption} id={`${product.id}-${sizeOption}`} />
                     <Label htmlFor={`${product.id}-${sizeOption}`} className="text-base cursor-pointer">
-                      {sizeOption} (+${(product.price[sizeOption] - product.price.Normal).toFixed(2)})
+                      {sizeOption} (+{(product.price[sizeOption] - product.price.Normal).toFixed(2)} LEI)
                     </Label>
                   </div>
                 ))}
@@ -116,7 +116,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
           <div className="mt-auto pt-6">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-secondary/30 p-4 rounded-lg">
-              <span className="text-3xl font-bold font-headline text-primary">${currentPrice.toFixed(2)}</span>
+              <span className="text-3xl font-bold font-headline text-primary">{currentPrice.toFixed(2)} LEI</span>
               <div className="flex items-center gap-4">
                 <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
                 <Button onClick={handleAddToCart} size="lg" className="flex-grow bg-accent text-accent-foreground hover:bg-accent/90">

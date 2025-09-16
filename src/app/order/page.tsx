@@ -77,14 +77,14 @@ export default function OrderPage() {
                 </div>
                 <div className="flex-grow">
                   <h2 className="font-headline text-xl">{item.name}</h2>
-                  <p className="text-sm text-muted-foreground">{item.size} - ${itemPrice.toFixed(2)}</p>
+                  <p className="text-sm text-muted-foreground">{item.size} - {itemPrice.toFixed(2)} LEI</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <QuantitySelector
                     quantity={item.quantity}
                     setQuantity={(q) => updateQuantity(item.cartItemId, q)}
                   />
-                   <p className="w-20 text-right font-bold text-lg">${(itemPrice * item.quantity).toFixed(2)}</p>
+                   <p className="w-20 text-right font-bold text-lg">{(itemPrice * item.quantity).toFixed(2)} LEI</p>
                   <Button variant="ghost" size="icon" onClick={() => removeFromCart(item.cartItemId)}>
                     <Trash2 className="h-5 w-5 text-destructive" />
                   </Button>
@@ -101,16 +101,16 @@ export default function OrderPage() {
           <CardContent className="space-y-4">
             <div className="flex justify-between">
               <span className="text-muted-foreground">Subtotal</span>
-              <span>${cartTotal.toFixed(2)}</span>
+              <span>{cartTotal.toFixed(2)} LEI</span>
             </div>
             <div className="flex justify-between">
               <span className="text-muted-foreground">Taxe ({(taxRate * 100).toFixed(0)}%)</span>
-              <span>${taxes.toFixed(2)}</span>
+              <span>{taxes.toFixed(2)} LEI</span>
             </div>
             <Separator />
             <div className="flex justify-between font-bold text-lg">
               <span>Total</span>
-              <span>${total.toFixed(2)}</span>
+              <span>{total.toFixed(2)} LEI</span>
             </div>
           </CardContent>
           <CardFooter>
