@@ -1,3 +1,11 @@
+export interface Nutrition {
+  calories: string;
+  protein: string;
+  fat: string;
+  carbohydrates: string;
+  sodium: string;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -8,6 +16,7 @@ export interface Product {
   price: number;
   image: string;
   category: 'Classic' | 'Gourmet' | 'Vegetarian';
+  nutrition: Nutrition;
 }
 
 export interface CartItem extends Product {

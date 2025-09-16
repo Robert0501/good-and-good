@@ -11,6 +11,7 @@ export const products: Product[] = [
     price: 14.99,
     image: 'margherita',
     category: 'Classic',
+    nutrition: { calories: '250', protein: '12g', fat: '10g', carbohydrates: '28g', sodium: '640mg' }
   },
   {
     id: '2',
@@ -22,6 +23,7 @@ export const products: Product[] = [
     price: 16.99,
     image: 'pepperoni',
     category: 'Classic',
+    nutrition: { calories: '320', protein: '15g', fat: '18g', carbohydrates: '30g', sodium: '980mg' }
   },
   {
     id: '3',
@@ -33,6 +35,7 @@ export const products: Product[] = [
     price: 15.99,
     image: 'veggie',
     category: 'Vegetarian',
+    nutrition: { calories: '230', protein: '10g', fat: '8g', carbohydrates: '32g', sodium: '590mg' }
   },
   {
     id: '4',
@@ -44,6 +47,7 @@ export const products: Product[] = [
     price: 18.99,
     image: 'bbq-chicken',
     category: 'Gourmet',
+    nutrition: { calories: '350', protein: '20g', fat: '14g', carbohydrates: '38g', sodium: '890mg' }
   },
   {
     id: '5',
@@ -55,6 +59,7 @@ export const products: Product[] = [
     price: 16.99,
     image: 'hawaiian',
     category: 'Classic',
+    nutrition: { calories: '290', protein: '14g', fat: '11g', carbohydrates: '35g', sodium: '910mg' }
   },
   {
     id: '6',
@@ -66,6 +71,7 @@ export const products: Product[] = [
     price: 19.99,
     image: 'meat-lovers',
     category: 'Gourmet',
+    nutrition: { calories: '410', protein: '22g', fat: '25g', carbohydrates: '31g', sodium: '1250mg' }
   },
   {
     id: '7',
@@ -77,6 +83,7 @@ export const products: Product[] = [
     price: 17.99,
     image: 'four-cheese',
     category: 'Vegetarian',
+    nutrition: { calories: '380', protein: '18g', fat: '22g', carbohydrates: '29g', sodium: '820mg' }
   },
   {
     id: '8',
@@ -88,5 +95,6 @@ export const products: Product[] = [
     price: 20.99,
     image: 'mushroom-truffle',
     category: 'Gourmet',
+    nutrition: { calories: '360', protein: '16g', fat: '20g', carbohydrates: '30g', sodium: '750mg' }
   },
 ];
