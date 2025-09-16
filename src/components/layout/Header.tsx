@@ -35,17 +35,19 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-lg">
-      <div className="container flex h-20 items-center">
-        <Link href="/" className="mr-8 flex items-center space-x-2">
-          <Pizza className="h-8 w-8 text-primary" />
-          <span className="font-bold font-headline text-2xl">Good and Goody</span>
-        </Link>
-        <nav className="hidden md:flex flex-1 items-center space-x-8">
-          {navLinks.map((link) => (
-            <NavLink key={link.href} {...link} />
-          ))}
-        </nav>
-        <div className="flex flex-1 items-center justify-end space-x-2">
+      <div className="container flex h-20 items-center justify-between">
+        <div className="flex items-center">
+          <Link href="/" className="mr-8 flex items-center space-x-2">
+            <Pizza className="h-8 w-8 text-primary" />
+            <span className="font-bold font-headline text-2xl">Good and Goody</span>
+          </Link>
+          <nav className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <NavLink key={link.href} {...link} />
+            ))}
+          </nav>
+        </div>
+        <div className="flex items-center space-x-2">
           <Button asChild variant="ghost" size="icon" className="relative h-12 w-12">
             <Link href="/order">
               <ShoppingCart className="h-6 w-6" />
