@@ -5,13 +5,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { products } from "@/lib/products";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const featuredPizzas = products.slice(0, 3);
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-pizza');
-  const aboutImage = PlaceHolderImages.find(p => p.id === 'pizza-oven');
-  const interiorImage = PlaceHolderImages.find(p => p.id === 'pizzeria-interior');
+  const aboutImages = PlaceHolderImages.filter(p => p.id.startsWith('story-'));
+  const interiorImages = PlaceHolderImages.filter(p => p.id.startsWith('interior-'));
+
 
   return (
     <div className="flex flex-col animate-fade-in-up">
@@ -97,17 +105,25 @@ export default function Home() {
       <section className="py-16 lg:py-24 bg-secondary/20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-            <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-2xl">
-              {aboutImage && (
-                <Image
-                  src={aboutImage.imageUrl}
-                  alt={aboutImage.description}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={aboutImage.imageHint}
-                />
-              )}
-            </div>
+            <Carousel className="w-full" opts={{ loop: true }}>
+              <CarouselContent>
+                {aboutImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-2xl">
+                      <Image
+                        src={image.imageUrl}
+                        alt={image.description}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={image.imageHint}
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
             <div className="animate-fade-in-up">
               <h2 className="font-headline text-5xl md:text-6xl mb-6">
                 Povestea Noastră
@@ -132,7 +148,7 @@ export default function Home() {
       <section className="py-16 lg:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-            <div className="animate-fade-in-up md:order-1">
+            <div className="animate-fade-in-up md:order-2">
               <h2 className="font-headline text-5xl md:text-6xl mb-6">
                 Interiorul Nostru
               </h2>
@@ -143,16 +159,26 @@ export default function Home() {
                 Fie că ești aici pentru o cină romantică, o ieșire cu prietenii sau o masă în familie, restaurantul nostru oferă un cadru confortabil și elegant pentru orice ocazie.
               </p>
             </div>
-            <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-2xl md:order-2">
-              {interiorImage && (
-                <Image
-                  src={interiorImage.imageUrl}
-                  alt={interiorImage.description}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={interiorImage.imageHint}
-                />
-              )}
+            <div className="md:order-1">
+              <Carousel className="w-full" opts={{ loop: true }}>
+                <CarouselContent>
+                  {interiorImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-2xl">
+                        <Image
+                          src={image.imageUrl}
+                          alt={image.description}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={image.imageHint}
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4" />
+                <CarouselNext className="right-4" />
+              </Carousel>
             </div>
           </div>
         </div>

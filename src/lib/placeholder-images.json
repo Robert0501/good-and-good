@@ -8,10 +8,22 @@
       "imageHint": "pizza rustic"
     },
     {
-      "id": "pizza-oven",
+      "id": "story-1",
       "description": "A traditional brick pizza oven with a fire inside.",
       "imageUrl": "https://images.unsplash.com/photo-1552539618-7eec9b4d1796?q=80&w=800&auto=format&fit=crop",
       "imageHint": "pizza oven"
+    },
+     {
+      "id": "story-2",
+      "description": "Chef stretching pizza dough.",
+      "imageUrl": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=800&auto=format&fit=crop",
+      "imageHint": "pizza dough"
+    },
+    {
+      "id": "story-3",
+      "description": "Fresh ingredients for pizza.",
+      "imageUrl": "https://images.unsplash.com/photo-1555077292-22a4481c258e?q=80&w=800&auto=format&fit=crop",
+      "imageHint": "pizza ingredients"
     },
     {
       "id": "menu-banner",
@@ -74,10 +86,22 @@
       "imageHint": "mushroom pizza"
     },
     {
-      "id": "pizzeria-interior",
+      "id": "interior-1",
       "description": "The cozy and modern interior of a pizzeria with warm lighting.",
       "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop",
       "imageHint": "pizzeria interior"
+    },
+    {
+      "id": "interior-2",
+      "description": "Restaurant interior with wooden tables and chairs.",
+      "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop",
+      "imageHint": "restaurant seating"
+    },
+    {
+      "id": "interior-3",
+      "description": "A stylish bar area inside a modern pizzeria.",
+      "imageUrl": "https://images.unsplash.com/photo-1600627258284-80337956385f?q=80&w=800&auto=format&fit=crop",
+      "imageHint": "restaurant bar"
     }
   ]
 }
