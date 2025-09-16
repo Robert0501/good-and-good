@@ -11,6 +11,7 @@ const featuredPizzas = products.slice(0, 3);
 export default function Home() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-pizza');
   const aboutImage = PlaceHolderImages.find(p => p.id === 'pizza-oven');
+  const interiorImage = PlaceHolderImages.find(p => p.id === 'pizzeria-interior');
 
   return (
     <div className="flex flex-col animate-fade-in-up">
@@ -122,6 +123,36 @@ export default function Home() {
                   Contactează-ne
                 </Link>
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Interior Section */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div className="animate-fade-in-up md:order-2">
+              <h2 className="font-headline text-5xl md:text-6xl mb-6">
+                Interiorul Nostru
+              </h2>
+              <p className="text-xl text-muted-foreground mb-4 text-balance">
+                Pășește într-un spațiu primitor și modern, unde mirosul de pizza proaspăt coaptă te întâmpină la intrare. Designul nostru combină elemente rustice cu o estetică urbană, creând atmosfera perfectă pentru o masă relaxantă.
+              </p>
+              <p className="text-xl text-muted-foreground text-balance">
+                Fie că ești aici pentru o cină romantică, o ieșire cu prietenii sau o masă în familie, restaurantul nostru oferă un cadru confortabil și elegant pentru orice ocazie.
+              </p>
+            </div>
+            <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-2xl md:order-1">
+              {interiorImage && (
+                <Image
+                  src={interiorImage.imageUrl}
+                  alt={interiorImage.description}
+                  fill
+                  className="object-cover"
+                  data-ai-hint={interiorImage.imageHint}
+                />
+              )}
             </div>
           </div>
         </div>
