@@ -39,7 +39,7 @@ export const products: Product[] = [
   },
   {
     id: '4',
-    name: 'Pui BBQ',
+    name: 'Pizza Pui BBQ',
     slug: 'bbq-chicken',
     description: 'Sos BBQ acrișor, pui la grătar, ceapă roșie și coriandru proaspăt.',
     longDescription: 'O opțiune afumată și savuroasă, această pizza conține pui fraged la grătar, ceapă roșie tăioasă și coriandru proaspăt pe o bază de sos barbecue acrișor, acoperită cu brânzeturi mozzarella și provolone.',
