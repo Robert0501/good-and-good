@@ -9,11 +9,11 @@ body {
 @layer base {
   :root {
     --background: 20 14% 4%; /* Near Black */
-    --foreground: 20 5% 95%; /* Off-White */
+    --foreground: 38 36% 90%; /* RAL 9001 Cream */
     --card: 20 14% 8%;
-    --card-foreground: 20 5% 95%;
+    --card-foreground: 38 36% 90%;
     --popover: 20 14% 4%;
-    --popover-foreground: 20 5% 95%;
+    --popover-foreground: 38 36% 90%;
     --primary: 30 19% 56%; /* #A48F7A */
     --primary-foreground: 20 14% 98%;
     --secondary: 20 14% 12%;
@@ -44,11 +44,11 @@ body {
   }
   .dark {
     --background: 20 14% 4%; /* Near Black */
-    --foreground: 20 5% 95%; /* Off-White */
+    --foreground: 38 36% 90%; /* RAL 9001 Cream */
     --card: 20 14% 8%;
-    --card-foreground: 20 5% 95%;
+    --card-foreground: 38 36% 90%;
     --popover: 20 14% 4%;
-    --popover-foreground: 20 5% 95%;
+    --popover-foreground: 38 36% 90%;
     --primary: 30 19% 56%; /* #A48F7A */
     --primary-foreground: 20 14% 98%;
     --secondary: 20 14% 12%;
