@@ -35,7 +35,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-lg">
-      <div className="container flex h-20 items-center justify-between">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <div className="flex items-center">
           <Link href="/" className="mr-8 flex items-center space-x-2">
             <Pizza className="h-8 w-8 text-primary" />
