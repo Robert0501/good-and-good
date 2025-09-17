@@ -40,49 +40,49 @@
     {
       "id": "margherita",
       "description": "A classic Margherita pizza with fresh basil.",
-      "imageUrl": "https://images.unsplash.com/photo-1598021680133-eb3a7331d324?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1574017010264-e1903c85a859?q=80&w=600&auto=format&fit=crop",
       "imageHint": "margherita pizza"
     },
     {
       "id": "pepperoni",
       "description": "A pepperoni pizza with melted cheese.",
-      "imageUrl": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600&auto=format&fit=crop",
       "imageHint": "pepperoni pizza"
     },
     {
       "id": "veggie",
       "description": "A vegetarian pizza topped with bell peppers, olives, and onions.",
       "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600&auto=format&fit=crop",
-      "imageHint": "vegetarian pizza"
+      "imageHint": "veggie pizza"
     },
     {
       "id": "bbq-chicken",
       "description": "A BBQ chicken pizza with red onions and cilantro.",
-      "imageUrl": "https://images.unsplash.com/photo-1565299589539-338758e525a2?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1604382355076-af4b0e626847?q=80&w=600&auto=format&fit=crop",
       "imageHint": "bbq pizza"
     },
     {
       "id": "hawaiian",
       "description": "A Hawaiian pizza with ham and pineapple.",
-      "imageUrl": "https://images.unsplash.com/photo-1566410141639-9a7a030f750d?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1590527379639-67d6c6a7fb78?q=80&w=600&auto=format&fit=crop",
       "imageHint": "hawaiian pizza"
     },
     {
       "id": "meat-lovers",
       "description": "A meat lover's pizza with sausage, pepperoni, and bacon.",
-      "imageUrl": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1633513689492-f02781476332?q=80&w=600&auto=format&fit=crop",
       "imageHint": "meat pizza"
     },
     {
       "id": "four-cheese",
       "description": "A four cheese pizza with a golden crust.",
-      "imageUrl": "https://images.unsplash.com/photo-1593560704563-f176a2eb61db?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1528137871618-6ca5084e2471?q=80&w=600&auto=format&fit=crop",
       "imageHint": "cheese pizza"
     },
     {
       "id": "mushroom-truffle",
       "description": "A gourmet mushroom and truffle oil pizza.",
-      "imageUrl": "https://images.unsplash.com/photo-1594007654729-407eedc4be65?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1608221650383-dc6a59e190b5?q=80&w=600&auto=format&fit=crop",
       "imageHint": "mushroom pizza"
     },
     {
@@ -106,74 +106,76 @@
     {
       "id": "panini-caprese",
       "description": "A classic caprese panini with fresh mozzarella, tomatoes, and basil.",
-      "imageUrl": "https://images.unsplash.com/photo-1627633569424-a396e83398a6?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1528738432313-0370634d1370?q=80&w=600&auto=format&fit=crop",
       "imageHint": "caprese panini"
     },
     {
       "id": "panini-chicken",
       "description": "A grilled chicken panini with pesto sauce.",
-      "imageUrl": "https://images.unsplash.com/photo-1606756790139-974d34c19b48?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1612994132899-73a11a87796d?q=80&w=600&auto=format&fit=crop",
       "imageHint": "chicken panini"
     },
     {
       "id": "panini-italian",
       "description": "A spicy italian panini with various meats.",
-      "imageUrl": "https://images.unsplash.com/photo-1592498299824-3c75a065a6f2?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1603903631825-f09b30c1154c?q=80&w=600&auto=format&fit=crop",
       "imageHint": "italian panini"
     },
     {
       "id": "tiramisu",
       "description": "A slice of classic Italian tiramisu dessert.",
-      "imageUrl": "https://images.unsplash.com/photo-1571115335190-6ac4b0b13d29?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1586985289936-3395a6394341?q=80&w=600&auto=format&fit=crop",
       "imageHint": "tiramisu dessert"
     },
     {
       "id": "cannoli",
       "description": "Sicilian cannoli with sweet ricotta filling.",
-      "imageUrl": "https://images.unsplash.com/photo-1588673836888-662664f8456a?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1615871217036-7c980f55b1f9?q=80&w=600&auto=format&fit=crop",
       "imageHint": "cannoli pastry"
     },
     {
       "id": "lava-cake",
       "description": "A chocolate lava cake with a gooey center.",
-      "imageUrl": "https://images.unsplash.com/photo-1586985289936-3395a6394341?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1618210386754-325b399d86a1?q=80&w=600&auto=format&fit=crop",
       "imageHint": "chocolate cake"
     },
     {
       "id": "espresso",
       "description": "A strong shot of espresso in a cup.",
-      "imageUrl": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1621282124503-a71991a7833a?q=80&w=600&auto=format&fit=crop",
       "imageHint": "espresso coffee"
     },
     {
       "id": "cappuccino",
       "description": "A cappuccino with latte art in a ceramic cup.",
-      "imageUrl": "https://images.unsplash.com/photo-1557006021-b3da438b3704?q=80&w=600&auto=format&fit=crop",
-      "imageHint": "cappuccino coffee"
+      "imageUrl": "https://images.unsplash.com/photo-1576092762791-d02d239f692c?q=80&w=600&auto=format&fit=crop",
+      "imageHint": "cappuccino art"
     },
     {
       "id": "latte",
       "description": "A smooth latte with beautiful latte art.",
-      "imageUrl": "https://images.unsplash.com/photo-1572442388825-7313a978d3b8?q=80&w=600&auto=format&fit=crop",
-      "imageHint": "latte coffee"
+      "imageUrl": "https://images.unsplash.com/photo-1563806253100-37b42001b96a?q=80&w=600&auto=format&fit=crop",
+      "imageHint": "latte art"
     },
     {
       "id": "soda",
       "description": "A glass of sparkling soda water with a lime.",
-      "imageUrl": "https://images.unsplash.com/photo-1543253687-c931c8e01820?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1617937223448-e3646f0465c2?q=80&w=600&auto=format&fit=crop",
       "imageHint": "soda water"
     },
     {
       "id": "lemonade",
       "description": "A refreshing glass of homemade lemonade.",
-      "imageUrl": "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1575794435882-d8972846a2a5?q=80&w=600&auto=format&fit=crop",
       "imageHint": "lemonade drink"
     },
     {
       "id": "iced-tea",
       "description": "A tall glass of iced tea with lemon.",
-      "imageUrl": "https://images.unsplash.com/photo-1556679343-c7306c19761a?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1586616012053-15915a285c5c?q=80&w=600&auto=format&fit=crop",
       "imageHint": "iced tea"
     }
   ]
 }
+
+    
