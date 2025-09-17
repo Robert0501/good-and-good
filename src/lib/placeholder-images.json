@@ -46,31 +46,31 @@
     {
       "id": "pepperoni",
       "description": "A pepperoni pizza with melted cheese.",
-      "imageUrl": "https://www.sortirambnens.com/wp-content/uploads/2020/03/pizza-pepperoni.jpg",
+      "imageUrl": "https://assets-us-01.kc-usercontent.com/4353bced-f940-00d0-8c6e-13a0a4a7f5c2/2ac60829-5178-4a6e-80cf-6ca43d862cee/Quick-and-Easy-Pepperoni-Pizza-700x700.jpeg?w=1280&auto=format",
       "imageHint": "pepperoni pizza"
     },
     {
       "id": "veggie",
       "description": "A vegetarian pizza topped with bell peppers, olives, and onions.",
-      "imageUrl": "https://jamilacuisine.ro/wp-content/uploads/2021/11/Pizza-cu-legume-coapte-500x500.jpg",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCUug2yPabV9ilQgthmMhKPRAopTNf-hgUQ&s",
       "imageHint": "vegetarian pizza"
     },
     {
       "id": "bbq-chicken",
       "description": "A BBQ chicken pizza with red onions and cilantro.",
-      "imageUrl": "https://damndelicious.net/wp-content/uploads/2023/04/DD-BBQ-Chicken-Pizza-5.jpg",
+      "imageUrl": "https://www.allrecipes.com/thmb/qZ7LKGV1_RYDCgYGSgfMn40nmks=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-24878-bbq-chicken-pizza-beauty-4x3-39cd80585ad04941914dca4bd82eae3d.jpg",
       "imageHint": "bbq chicken"
     },
     {
       "id": "hawaiian",
       "description": "A Hawaiian pizza with ham and pineapple.",
-      "imageUrl": "https://www.allrecipes.com/thmb/v1_lmcJS2-k3n8p4fJd2A8_2J5E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/26488-hawaiian-pizza-DDMFS-4x3-3b334a43a6a94a9ea26159a43a0d922a.jpg",
+      "imageUrl": "https://magazin.klarstein.hu/wp-content/uploads/2023/02/KS_Magazine_0223_Pizza-Hawaii_1300x1300px.jpg",
       "imageHint": "hawaiian pizza"
     },
     {
       "id": "meat-lovers",
       "description": "A meat lover's pizza with sausage, pepperoni, and bacon.",
-      "imageUrl": "https://www.allrecipes.com/thmb/3o0Yh6wWa2w32wMLV-5oY-a6o68=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/240366-meat-lovers-pizza-DDMFS-4x3-f0968149868c460499e993049b49b165.jpg",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGc20kjO_q9REIXSsjcNhxGGTg6hl2S7F_iQ&s",
       "imageHint": "meat pizza"
     },
     {
