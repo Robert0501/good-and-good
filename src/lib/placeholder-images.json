@@ -27,9 +27,9 @@
     },
     {
       "id": "menu-banner",
-      "description": "Fresh pizza ingredients like tomatoes, basil, and flour on a dark table.",
-      "imageUrl": "https://images.unsplash.com/photo-1534352956036-cd81e27dd415?q=80&w=1920&auto=format&fit=crop",
-      "imageHint": "pizza ingredients"
+      "description": "A chef sprinkling flour over a pizza dough.",
+      "imageUrl": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=1920&auto=format&fit=crop",
+      "imageHint": "pizza making"
     },
     {
       "id": "contact-banner",
@@ -40,31 +40,31 @@
     {
       "id": "margherita",
       "description": "A classic Margherita pizza with fresh basil.",
-      "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://s13emagst.akamaized.net/products/34763/34762512/images/res_e9a66d03831b3260759080064d1f2b1d.jpg",
       "imageHint": "margherita pizza"
     },
     {
       "id": "pepperoni",
       "description": "A pepperoni pizza with melted cheese.",
-      "imageUrl": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://www.sortirambnens.com/wp-content/uploads/2020/03/pizza-pepperoni.jpg",
       "imageHint": "pepperoni pizza"
     },
     {
       "id": "veggie",
       "description": "A vegetarian pizza topped with bell peppers, olives, and onions.",
-      "imageUrl": "https://images.unsplash.com/photo-1594007654729-407eedc4be65?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://jamilacuisine.ro/wp-content/uploads/2021/11/Pizza-cu-legume-coapte-500x500.jpg",
       "imageHint": "vegetarian pizza"
     },
     {
       "id": "bbq-chicken",
       "description": "A BBQ chicken pizza with red onions and cilantro.",
-      "imageUrl": "https://images.unsplash.com/photo-1604382355076-af4b0c6278c5?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://damndelicious.net/wp-content/uploads/2021/10/BBQ-Chicken-Pizza-500x500.jpg",
       "imageHint": "bbq pizza"
     },
     {
       "id": "hawaiian",
       "description": "A Hawaiian pizza with ham and pineapple.",
-      "imageUrl": "https://images.unsplash.com/photo-1595709663702-7a4c9e4c8c7f?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://www.allrecipes.com/thmb/t2n0sW01aEh6A6p5oD3ott2_l7s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8527294-hawaiian-pizza-DDMFS-4x3-3b32e604f323485c88ee1481b4ad740d.jpg",
       "imageHint": "hawaiian pizza"
     },
     {
@@ -82,7 +82,7 @@
     {
       "id": "mushroom-truffle",
       "description": "A gourmet mushroom and truffle oil pizza.",
-      "imageUrl": "https://images.unsplash.com/photo-1589953835239-2b00516886e0?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://lavida.md/wp-content/uploads/2021/04/gribnaya-s-tryufelnym-kremom-scaled.jpg",
       "imageHint": "mushroom pizza"
     },
     {
