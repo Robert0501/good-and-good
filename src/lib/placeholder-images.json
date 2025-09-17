@@ -40,31 +40,31 @@
     {
       "id": "margherita",
       "description": "A classic Margherita pizza with fresh basil.",
-      "imageUrl": "https://s13emagst.akamaized.net/products/34763/34762512/images/res_e9a66d03831b3260759080064d1f2b1d.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1598021680133-eb3a7331d324?q=80&w=600&auto=format&fit=crop",
       "imageHint": "margherita pizza"
     },
     {
       "id": "pepperoni",
       "description": "A pepperoni pizza with melted cheese.",
-      "imageUrl": "https://www.sortirambnens.com/wp-content/uploads/2020/03/pizza-pepperoni.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=600&auto=format&fit=crop",
       "imageHint": "pepperoni pizza"
     },
     {
       "id": "veggie",
       "description": "A vegetarian pizza topped with bell peppers, olives, and onions.",
-      "imageUrl": "https://jamilacuisine.ro/wp-content/uploads/2021/11/Pizza-cu-legume-coapte-500x500.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600&auto=format&fit=crop",
       "imageHint": "vegetarian pizza"
     },
     {
       "id": "bbq-chicken",
       "description": "A BBQ chicken pizza with red onions and cilantro.",
-      "imageUrl": "https://damndelicious.net/wp-content/uploads/2021/10/BBQ-Chicken-Pizza-500x500.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1565299589539-338758e525a2?q=80&w=600&auto=format&fit=crop",
       "imageHint": "bbq pizza"
     },
     {
       "id": "hawaiian",
       "description": "A Hawaiian pizza with ham and pineapple.",
-      "imageUrl": "https://www.allrecipes.com/thmb/t2n0sW01aEh6A6p5oD3ott2_l7s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8527294-hawaiian-pizza-DDMFS-4x3-3b32e604f323485c88ee1481b4ad740d.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1566410141639-9a7a030f750d?q=80&w=600&auto=format&fit=crop",
       "imageHint": "hawaiian pizza"
     },
     {
@@ -82,7 +82,7 @@
     {
       "id": "mushroom-truffle",
       "description": "A gourmet mushroom and truffle oil pizza.",
-      "imageUrl": "https://lavida.md/wp-content/uploads/2021/04/gribnaya-s-tryufelnym-kremom-scaled.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1594007654729-407eedc4be65?q=80&w=600&auto=format&fit=crop",
       "imageHint": "mushroom pizza"
     },
     {
