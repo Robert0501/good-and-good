@@ -40,43 +40,43 @@
     {
       "id": "margherita",
       "description": "A classic Margherita pizza with fresh basil.",
-      "imageUrl": "https://images.unsplash.com/photo-1598021680133-eb3a737d93a5?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://s13emagst.akamaized.net/products/34763/34762512/images/res_e9a66d03831b3260759080064d1f2b1d.jpg",
       "imageHint": "margherita pizza"
     },
     {
       "id": "pepperoni",
       "description": "A pepperoni pizza with melted cheese.",
-      "imageUrl": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://www.sortirambnens.com/wp-content/uploads/2020/03/pizza-pepperoni.jpg",
       "imageHint": "pepperoni pizza"
     },
     {
       "id": "veggie",
       "description": "A vegetarian pizza topped with bell peppers, olives, and onions.",
-      "imageUrl": "https://images.unsplash.com/photo-1594007654729-407eedc4be65?q=80&w=600&auto=format&fit=crop",
-      "imageHint": "veggie pizza"
+      "imageUrl": "https://jamilacuisine.ro/wp-content/uploads/2021/11/Pizza-cu-legume-coapte-500x500.jpg",
+      "imageHint": "vegetarian pizza"
     },
     {
       "id": "bbq-chicken",
       "description": "A BBQ chicken pizza with red onions and cilantro.",
-      "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://damndelicious.net/wp-content/uploads/2023/04/DD-BBQ-Chicken-Pizza-5.jpg",
       "imageHint": "bbq chicken"
     },
     {
       "id": "hawaiian",
       "description": "A Hawaiian pizza with ham and pineapple.",
-      "imageUrl": "https://images.unsplash.com/photo-1566455320214-c167083a2c91?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://www.allrecipes.com/thmb/v1_lmcJS2-k3n8p4fJd2A8_2J5E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/26488-hawaiian-pizza-DDMFS-4x3-3b334a43a6a94a9ea26159a43a0d922a.jpg",
       "imageHint": "hawaiian pizza"
     },
     {
       "id": "meat-lovers",
       "description": "A meat lover's pizza with sausage, pepperoni, and bacon.",
-      "imageUrl": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://www.allrecipes.com/thmb/3o0Yh6wWa2w32wMLV-5oY-a6o68=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/240366-meat-lovers-pizza-DDMFS-4x3-f0968149868c460499e993049b49b165.jpg",
       "imageHint": "meat pizza"
     },
     {
       "id": "four-cheese",
       "description": "A four cheese pizza with a golden crust.",
-      "imageUrl": "https://images.unsplash.com/photo-1627443442434-64883b9944d6?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://lavida.md/wp-content/uploads/2022/02/pizza-4-formaggi.jpeg",
       "imageHint": "cheese pizza"
     },
     {
